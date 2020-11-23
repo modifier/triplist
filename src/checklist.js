@@ -24,6 +24,18 @@ export const triplistGroups = [
 		]
 	},
 	{
+		title: 'Техника',
+		id: 2,
+		items: [
+			{ title: 'Зарядка для телефона', id: 10 },
+			{ title: 'Зарядная банка', id: 11 },
+			{ title: 'Наушники', id: 12 },
+			{ title: 'Mi band', id: 13 },
+			{ title: 'Зарядка для mi band', id: 14 },
+			{ title: 'Ноутбук', id: 33 },
+		]
+	},
+	{
 		title: 'Гигена',
 		id: 4,
 		items: [
@@ -39,17 +51,6 @@ export const triplistGroups = [
 		]
 	},
 	{
-		title: 'Техника',
-		id: 2,
-		items: [
-			{ title: 'Зарядка для телефона', id: 10 },
-			{ title: 'Зарядная банка', id: 11 },
-			{ title: 'Наушники', id: 12 },
-			{ title: 'Mi band', id: 13 },
-			{ title: 'Зарядка для mi band', id: 14 },
-		]
-	},
-	{
 		title: 'Фотоаппарат',
 		id: 3,
 		items: [
@@ -58,6 +59,18 @@ export const triplistGroups = [
 			{ title: 'Зарядное устройство', id: 17 },
 			{ title: 'Карта памяти', id: 18 },
 			{ title: 'Карандаш для оптики', id: 19 },
+		]
+	},
+	{
+		title: 'Перед выходом',
+		id: 5,
+		items: [
+			{ title: 'Скачать карты для maps.me', id: 34 },
+			{ title: 'Посмотреть дорогу из аэропорта', id: 35 },
+			{ title: 'Выкинуть мусор', id: 29 },
+			{ title: 'Полить цветы', id: 30 },
+			{ title: 'Выключить всё из розетки', id: 31 },
+			{ title: 'Проверить погоду', id: 32 },
 		]
 	},
 ];
