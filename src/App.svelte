@@ -11,6 +11,7 @@
 <main class="triplist">
 	<header class="triplist__header">
 		<h1 class="triplist__title">С чем поехать</h1>
+		<p class="triplist__desc-mobile">Короткий список того, что взять с собой в поездку.</p>
 
 		{#if $triplistStore.previousChecks}
 			<button class="triplist__unreset" on:click={triplistStore.unresetAll}>Отменить</button>
@@ -42,23 +43,31 @@
 }
 
 .triplist__title {
-	font-size: 2rem;
+	font-size: 2.1rem;
 	margin: 0;
 }
 
-.triplist__desc {
+.triplist__desc,
+.triplist__desc-mobile {
 	margin-top: 0.5rem;
+}
+
+.triplist__desc-mobile {
+	display: none;
 }
 
 .triplist__groups {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin: 0 -1em;
 }
 
 .triplist__group {
-	flex: 0 1 19rem;
+	flex: 0 1 33.3%;
+	padding: 0 1em 0;
 	margin-bottom: 2em;
+	box-sizing: border-box;
 }
 
 .triplist__reset,
@@ -75,4 +84,40 @@
 .triplist__unreset:hover {
 	background: #eee;
 }
+
+@media screen and (max-width: 60rem) {
+	.triplist {
+		max-width: 40rem;
+	}
+
+	.triplist__group {
+		flex-basis: 50%;
+	}
+}
+
+@media screen and (max-width: 40rem) {
+	.triplist__header {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.triplist__group {
+		flex-basis: 100%;
+	}
+
+	.triplist__reset,
+	.triplist__unreset {
+		width: 100%;
+		margin: 1em 0;
+	}
+
+	.triplist__desc-mobile {
+		display: block;
+	}
+
+	.triplist__desc {
+		display: none;
+	}
+}
+
 </style>

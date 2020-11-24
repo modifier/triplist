@@ -46,4 +46,11 @@
 	margin: 0;
 	list-style: none;
 }
+
+@media screen and (max-width: 40rem) {
+	.checkbox-group {
+		border: 0;
+		padding: 0;
+	}
+}
 </style>
