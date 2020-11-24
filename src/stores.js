@@ -7,11 +7,11 @@ function getInitialChecks() {
 	try {
 		result = JSON.parse(storedChecks);
 	} catch (e) {
-		console.error("Cannout parse initial checks: ", e);
+		console.error("Cannot parse initial checks: ", e);
 		return {};
 	}
 
-	if (typeof result !== 'object') {
+	if (typeof result !== 'object' || result === null) {
 		return {};
 	}
 
