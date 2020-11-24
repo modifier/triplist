@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable, derived } from 'svelte/store';
 
 function getInitialChecks() {
 	const storedChecks = localStorage.getItem('checks');
@@ -30,20 +30,36 @@ function isStringNumber(key) {
 }
 
 function createTriplistStore() {
-
-	const { subscribe, set, update } = writable({
-		checks: getInitialChecks()
+	const store = writable({
+		checks: getInitialChecks(),
+		previousChecks: null
 	});
 
 	return {
-		subscribe,
-		checkItem: (id, isChecked) => update(state => {
+		subscribe: store.subscribe,
+		checkItem: (id, isChecked) => store.update(state => {
 			state.checks[id] = isChecked;
+
+			state.previousChecks = null;
 
 			localStorage.setItem('checks', JSON.stringify(state.checks));
 
 			return state;
 		}),
+		resetAll: () => store.update(state => {
+			state.previousChecks = state.checks;
+
+			state.checks = {};
+
+			return state;
+		}),
+		unresetAll: () => store.update(state => {
+			state.checks = state.previousChecks;
+
+			state.previousChecks = null;
+
+			return state;
+		})
 	};
 }
 

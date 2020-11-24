@@ -4,14 +4,13 @@
 
 	export let title;
 	export let items;
-	export let className;
 
 	function handleChecked(e) {
 		triplistStore.checkItem(e.detail.id, e.detail.checked);
 	}
 </script>
 
-<div class={[className, "checkbox-group"].join(" ")}>
+<div class="checkbox-group">
 	<h2 class="checkbox-group__title">{ title }</h2>
 	<ul class="checkbox-group__items">
 		{#each items as item (item.id)}
