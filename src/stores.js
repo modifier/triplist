@@ -50,6 +50,7 @@ function createTriplistStore() {
 			state.previousChecks = state.checks;
 
 			state.checks = {};
+			localStorage.setItem('checks', JSON.stringify(state.checks));
 
 			return state;
 		}),
