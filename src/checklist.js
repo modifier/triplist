@@ -33,6 +33,7 @@ export const triplistGroups = [
 			{ title: 'Mi band', id: 13 },
 			{ title: 'Зарядка для mi band', id: 14 },
 			{ title: 'Ноутбук', id: 33 },
+			{ title: 'Зарядка для ноутбука', id: 41 },
 		]
 	},
 	{
@@ -59,6 +60,17 @@ export const triplistGroups = [
 			{ title: 'Зарядное устройство', id: 17 },
 			{ title: 'Карта памяти', id: 18 },
 			{ title: 'Карандаш для оптики', id: 19 },
+		]
+	},
+	{
+		title: 'Развлечения',
+		id: 6,
+		items: [
+			{ title: 'Книжка', id: 36 },
+			{ title: 'Игральные карты', id: 37 },
+			{ title: 'Штопор', id: 38 },
+			{ title: 'Бинокль', id: 39 },
+			{ title: 'Чай / кофе', id: 40 },
 		]
 	},
 	{
