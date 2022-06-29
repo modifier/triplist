@@ -99,6 +99,14 @@
         transform: scale(1);
     }
 }
+
+input:disabled {
+  color: #ccc;
+}
+
+label {
+  display: block;
+}
 </style>
 
 <!-- https://codepen.io/aaroniker/pen/PowZbgb?editors=1100 -->
