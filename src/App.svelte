@@ -39,6 +39,10 @@
 	font-family: 'Rubik', 'Helvetica', sans-serif;
 }
 
+p {
+	margin: 1em 0;
+}
+
 .triplist__header {
 	display: flex;
 	justify-content: space-between;
